@@ -1,0 +1,27 @@
+graph LR
+      HTTP(HTTP front-end)
+
+      subgraph OSGi
+        SRR(Sling Resource Resolver)
+        SEP(Sling Extension Points)
+        SSR(Sling Servlet Resolver)
+        SRP(Sling Resource Provider)
+      end
+
+      subgraph Oak
+        oak(Oak Content Repository)
+        db((MongoDB))
+      end
+
+       HTTP --> SRR
+
+       SRR --> SSR
+       SSR --> SRP
+       SRP --> oak
+
+       SRR -.-> SEP
+       SSR -.-> SEP
+       SRP -.-> SEP
+       oak --> db
+
+       style SEP fill:yellow

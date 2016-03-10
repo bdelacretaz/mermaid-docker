@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "graph LR"
-echo "SomeBox(Mermaid graph generated at $(date))"
+echo "SomeBox(Minimal Mermaid graph generated at $(date))"

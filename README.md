@@ -17,3 +17,5 @@ a PNG image:
     ./dynamic-diagram.sh | ./generate-png.sh
 	
 The resulting image is found at `/tmp/mermaid-output.png`	
+
+Have a look at those (very simple) scripts for more details.
